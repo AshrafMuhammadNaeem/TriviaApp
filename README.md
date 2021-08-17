@@ -15,3 +15,17 @@ The <div> tag is used as a container for HTML elements - which is then styled wi
 The <div> tag is easily styled by using the class or id attribute.
 
 Any sort of content can be put inside the <div> tag! 
+
+Use of footer Tag:
+The <footer> tag defines a footer for a document or section.
+
+A <footer> element typically contains:
+
+    authorship information
+    copyright information
+    contact information
+    sitemap
+    back to top links
+    related documents
+
+You can have several <footer> elements in one document.
