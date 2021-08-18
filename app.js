@@ -47,8 +47,6 @@ var defaultQuestions = [
         correct: "C"
     }];
 
-]
-
 // get HTML elements
 
 var taQuiz = document.getElementById("quiz");
@@ -73,7 +71,7 @@ function populateQuestions(){
 
     questions = defaultQuestions;
     if(localStorage.getItem("questions")){
-        var storedQuestions = JSON.parse(localStorage.getItem("questions");
+        var storedQuestions = JSON.parse(localStorage.getItem("questions"));
         for ( i = 0; i < storedQuestions.length; i++){
             questions.push(storedQuestions[i]);
         }
@@ -99,7 +97,7 @@ function populateQuestionsInfo() {
 // info data to the web browser by using inner HTML as well as updating the quiz status
 function renderQuestion() {
      questionID = current + 1;
-     taQuizStatus.innerHTML = "Question" + (questionID) + " of " + (numQuestions);
+     taQuizStatus.innerHTML = "Question " + (questionID) + " of " + (numQuestions);
     populateQuestionsInfo();
     taQuestion.innerHTML = question;
     taChoiceA.innerHTML = choiceA;
