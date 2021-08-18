@@ -1,5 +1,6 @@
-//Store questions in an array named questions
-var questions = [];
+//Initialize the variable can be used in this code
+var questions, question, choiceA, choiceB, choiceC, choiceD, choices, qInfo, numQuestions, questionID,
+current = 0;
 //Store user score for each question in an array named points
 var score = 0;
 var points = [];

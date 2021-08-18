@@ -34,3 +34,9 @@ JSON.stringy and parse difference:
 stringify means, take an object and return its presentation as a string. What you have, is already a string and not a JSON object.
 
 The opposite is JSON.parse which takes a string and turns it into an object.
+A common use of JSON is to exchange data to/from a web server.
+
+When receiving data from a web server, the data is always a string.
+
+Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+When using the JSON.parse() on a JSON derived from an array, the method will return a JavaScript array, instead of a JavaScript object
