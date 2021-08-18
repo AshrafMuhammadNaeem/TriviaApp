@@ -1,5 +1,5 @@
 //Initialize the variable can be used in this code
-var questions, question, choiceA, choiceB, choiceC, choiceD, choices, qInfo, numQuestions, questionID,
+var questions, question, choiceA, choiceB, choiceC, choiceD, correct, choices, qInfo, numQuestions, questionID,
 current = 0;
 //Store user score for each question in an array named points
 var score = 0;
@@ -64,6 +64,33 @@ var taChoiceA  = document.getElementById("choiceD");
 var taChoices = document.getElementsByName("choices");
 
 var taQuizStatus = document.getElementById("quizStatus");
+
+// starting the quiz by declaring and calling function
+populateQuestions();
+renderQuestion();
+
+function populateQuestions(){
+
+    questions = defaultQuestions;
+    if(localStorage.getItem("questions")){
+        var storedQuestions = JSON.parse(localStorage.getItem("questions");
+        for ( i = 0; i < storedQuestions.length; i++){
+            questions.push(storedQuestions[i]);
+        }
+    }
+    // the numQuestions variable, which is used later to display user progress
+    numQuestions = questions.length;
+}
+function populateQuestionsInfo() {
+    question = questions[current];
+    qInfo = question;
+    choiceA = qInfo.choiceA
+    choiceB = qInfo.choiceB
+    choiceC = qInfo.choiceC
+    choiceD = qInfo.choiceD
+    correct = qInfo.correct
+    
+}
     
 
       
