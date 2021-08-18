@@ -82,8 +82,9 @@ function populateQuestions(){
     numQuestions = questions.length;
 }
 function populateQuestionsInfo() {
-    question = questions[current];
-    qInfo = question;
+   
+    qInfo = questions[current];
+    question = qInfo.question
     choiceA = qInfo.choiceA
     choiceB = qInfo.choiceB
     choiceC = qInfo.choiceC
