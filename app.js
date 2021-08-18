@@ -54,11 +54,11 @@ var taQuestion = document.getElementById("question");
     
 var taChoiceA = document.getElementById("choiceA");
     
-var taChoiceA  = document.getElementById("choiceB");
+var taChoiceB  = document.getElementById("choiceB");
     
-var taChoiceA  = document.getElementById("choiceC");
+var taChoiceC  = document.getElementById("choiceC");
     
-var taChoiceA  = document.getElementById("choiceD");
+var taChoiceD  = document.getElementById("choiceD");
 var taChoices = document.getElementsByName("choices");
 
 var taQuizStatus = document.getElementById("quizStatus");
