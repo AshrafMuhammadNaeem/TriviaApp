@@ -49,21 +49,21 @@ var defaultQuestions = [
 
 ]
 
+// get HTML elements
 
-
-
-
-
-var quiz = document.getElementById("quiz");
-var question = document.getElementById("question");
+var taQuiz = document.getElementById("quiz");
+var taQuestion = document.getElementById("question");
     
-var choiceA = document.getElementById("choiceA");
+var taChoiceA = document.getElementById("choiceA");
     
-var choiceB = document.getElementById("choiceB");
+var taChoiceA  = document.getElementById("choiceB");
     
-var choiceC = document.getElementById("choiceC");
+var taChoiceA  = document.getElementById("choiceC");
     
-var choiceD = document.getElementById("choiceD");
+var taChoiceA  = document.getElementById("choiceD");
+var taChoices = document.getElementsByName("choices");
+
+var taQuizStatus = document.getElementById("quizStatus");
     
 
       
