@@ -29,3 +29,8 @@ A <footer> element typically contains:
     related documents
 
 You can have several <footer> elements in one document.
+
+JSON.stringy and parse difference:
+stringify means, take an object and return its presentation as a string. What you have, is already a string and not a JSON object.
+
+The opposite is JSON.parse which takes a string and turns it into an object.
