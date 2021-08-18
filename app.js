@@ -83,8 +83,9 @@ function populateQuestions(){
 function populateQuestionsInfo() {
     // we will use questions Array with current index (previusly set to current = 0) as this questions
     // array contains object items so we use standard syntax: objectName.propertyName= qInfo; then here we go.
-    question = questions[current].question;
+    
     qInfo = questions[current];
+    question = qInfo.question;
     choiceA = qInfo.choiceA;
     choiceB = qInfo.choiceB;
     choiceC = qInfo.choiceC;
@@ -98,7 +99,7 @@ function populateQuestionsInfo() {
 function renderQuestion() {
      questionID = current + 1;
      taQuizStatus.innerHTML = "Question " + (questionID) + " of " + (numQuestions);
-    populateQuestionsInfo();
+     populateQuestionsInfo();
     taQuestion.innerHTML = question;
     taChoiceA.innerHTML = choiceA;
     taChoiceB.innerHTML = choiceB;
