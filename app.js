@@ -81,15 +81,31 @@ function populateQuestions(){
     // the numQuestions variable, which is used later to display user progress
     numQuestions = questions.length;
 }
+// The populateQuestionInfo() function populates application variables with question info for the current question.
 function populateQuestionsInfo() {
-   
+    // we will use questions Array with current index (previusly set to current = 0) as this questions
+    // array contains object items so we use standard syntax: objectName.propertyName= qInfo; then here we go.
+    question = questions[current].question;
     qInfo = questions[current];
-    question = qInfo.question
-    choiceA = qInfo.choiceA
-    choiceB = qInfo.choiceB
-    choiceC = qInfo.choiceC
-    choiceD = qInfo.choiceD
-    correct = qInfo.correct
+    choiceA = qInfo.choiceA;
+    choiceB = qInfo.choiceB;
+    choiceC = qInfo.choiceC;
+    choiceD = qInfo.choiceD;
+    correct = qInfo.correct;
+    
+}
+
+//  using render function to be called to modify the html elements and filling and rendering the current question 
+// info data to the web browser by using inner HTML as well as updating the quiz status
+function renderQuestion() {
+     questionID = current + 1;
+     taQuizStatus.innerHTML = "Question" + (questionID) + " of " + (numQuestions);
+    populateQuestionsInfo();
+    taQuestion.innerHTML = question;
+    taChoiceA.innerHTML = choiceA;
+    taChoiceB.innerHTML = choiceB;
+    taChoiceC.innerHTML = choiceC;
+    taChoiceD.innerHTML = choiceD;
     
 }
     
