@@ -95,11 +95,6 @@ function populateQuestionsInfo() {
     correct = qInfo.correct;
     
 }
-function goForNextQ() {
-    for(i = 0; i < numQuestions.length; i++) {
-        current++;
-    }
-}
 
 //  using render function to be called to modify the html elements and filling and rendering the current question 
 // info data to the web browser by using inner HTML as well as updating the quiz status
@@ -112,6 +107,13 @@ function renderQuestion() {
     taChoiceB.innerHTML = choiceB;
     taChoiceC.innerHTML = choiceC;
     taChoiceD.innerHTML = choiceD;
+    
+}
+function goForNextQ() {
+    current++;
+    
+    renderQuestion();
+        
     
 }
 
