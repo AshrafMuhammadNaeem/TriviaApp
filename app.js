@@ -110,15 +110,22 @@ function renderQuestion() {
     
 }
 function goForNextQ() {
-    for (var current = 0; current < numQuestions; current++) {
-        current++;
+    if(userChoice == qInfo.correct) {
+        score = 1 + current;
+        points[current] = 1;
+       
+    }
+     else{
+         points[current] = 0;
 
+    }
+
+    current++;
 
     renderQuestion();
 
-    }
-      
 }
+    
 
     
 
