@@ -110,8 +110,8 @@ function renderQuestion() {
     
 }
 function goForNextQ() {
-
-    if(getUserChoice == qInfo.correct) {
+    if(getUserChoice()){
+       if(getUserChoice == qInfo.correct) {
         score = 1 + current;
         points[current] = 1;
        
@@ -126,7 +126,24 @@ function goForNextQ() {
     renderQuestion();
 
 }
+}
+function getUserChoice() {
+    for (i = 0; i < taChoices.length; i++)
+    {
+        if(taChoices[i].checked){
+            userChoice == taChoices[i].value;
+            taChoices[i].checked = false;
+            return true;
+        }
+        
+
+    }
+    alert("Please select an answer before continuing");
+    return false;
+         
+    }
     
+
 
     
 
