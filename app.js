@@ -62,6 +62,7 @@ var taChoiceD  = document.getElementById("choiceD");
 var taChoices = document.getElementsByName("choices");
 
 var taQuizStatus = document.getElementById("quizStatus");
+var submitButton = document.getElementById("submit");
 
 // starting the quiz by declaring and calling function
 populateQuestions();
