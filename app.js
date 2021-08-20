@@ -1,5 +1,5 @@
 //Initialize the variable can be used in this code
-var questions, question, choiceA, choiceB, choiceC, choiceD, correct, choices, qInfo, numQuestions, questionID,
+var questions, question, choiceA, choiceB, choiceC, choiceD, correct, choices, qInfo, numQuestions, questionID, userChoice
 current = 0;
 //Store user score for each question in an array named points
 var score = 0;
@@ -99,7 +99,7 @@ function populateQuestionsInfo() {
 //  using render function to be called to modify the html elements and filling and rendering the current question 
 // info data to the web browser by using inner HTML as well as updating the quiz status
 function renderQuestion() {
-     questionID = current + 1;
+    questionID = current + 1;
      taQuizStatus.innerHTML = "Question " + (questionID) + " of " + (numQuestions);
      populateQuestionsInfo();
     taQuestion.innerHTML = question;
@@ -110,11 +110,14 @@ function renderQuestion() {
     
 }
 function goForNextQ() {
-    current++;
-    
+    for (var current = 0; current < numQuestions; current++) {
+        current++;
+
+
     renderQuestion();
-        
-    
+
+    }
+      
 }
 
     
