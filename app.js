@@ -96,8 +96,7 @@ function populateQuestionsInfo() {
     
 }
 goForNextQ(){
-    for(i = 0; i < numQuestions.length; i++)
-    {
+    for(i = 0; i < numQuestions.length; i++) {
         current++;
     }
 }
