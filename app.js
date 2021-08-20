@@ -110,7 +110,8 @@ function renderQuestion() {
     
 }
 function goForNextQ() {
-    if(userChoice == qInfo.correct) {
+
+    if(getUserChoice == qInfo.correct) {
         score = 1 + current;
         points[current] = 1;
        
