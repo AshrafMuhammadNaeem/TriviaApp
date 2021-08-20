@@ -126,7 +126,23 @@ function goForNextQ() {
     renderQuestion();
 
 }
+function getUserChoice() {
+    for (i = 0; i < taChoices.length; i++)
+    {
+        if(taChoices[i].checked){
+            userChoice == taChoices[i].value;
+            taChoices[i].checked = false;
+            return true;
+        }
+        
+
+    }
+    alert("Please select an answer before continuing");
+    return false;
+         
+    }
     
+
 
     
 
