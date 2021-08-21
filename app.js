@@ -120,10 +120,12 @@ function goForNextQ() {
          points[current] = 0;
 
     }
-
-    current++;
-
-    renderQuestion();
+    
+    for(var current = i; i = 0; current < numQuestions; current++){
+        
+        if (current == 5) { break; }
+        renderQuestion();
+    }
 
 }
 }
