@@ -1,9 +1,8 @@
 //Initialize the variable can be used in this code
-var questions, question, choiceA, choiceB, choiceC, choiceD, correct, choices, qInfo, numQuestions, questionID, userChoice
-current = 0;
-//Store user score for each question in an array named points
-var score = 0;
-var points = [];
+var questions, question, choiceA, choiceB, choiceC, choiceD, qInfo, numQuestions, userChoice, questionID
+current = 0,
+score = 0;
+points = [];
 //Store a default set of 5 questions in an array named defaultQuestions
 var defaultQuestions = [
     {
@@ -12,7 +11,7 @@ var defaultQuestions = [
         choiceB: "nose",
         choiceC: "toes",
         choiceD: "eyes",
-        correct: "A"
+        correct: "middle ear"
     },
     {
         question: "What is the most abundant element in the Universe?",
@@ -44,7 +43,7 @@ var defaultQuestions = [
         choiceB: "Mars",
         choiceC: "Jupiter",
         choiceD: "Uranus",
-        correct: "C"
+        correct: "Jupiter"
     }];
 
 // get HTML elements
@@ -68,6 +67,7 @@ var submitButton = document.getElementById("submit");
 populateQuestions();
 renderQuestion();
 submitButton.addEventListener("click", goForNextQ);
+goForNextQ();
 
 function populateQuestions(){
 
@@ -109,11 +109,27 @@ function renderQuestion() {
     taChoiceD.innerHTML = choiceD;
     
 }
+function getUserChoice() {
+    for (i = 0; i < taChoices.length; i++)
+    {
+        if(taChoices[i].checked){
+            userChoice == taChoices[i].value;
+            taChoices[i].checked = false;
+            return true;
+        }
+        
+
+    }
+    alert("Please select an answer before continuing");
+    return false;
+         
+    }
 function goForNextQ() {
     if(getUserChoice()){
-       if(getUserChoice == qInfo.correct) {
-        score = 1 + current;
-        points[current] = 1;
+       if(userChoice == questions[current].correct) {
+           score++;
+           points[current] = 1;
+           
        
     }
      else{
@@ -131,28 +147,28 @@ function goForNextQ() {
 }
 
 }
-function getUserChoice() {
-    for (i = 0; i < taChoices.length; i++)
-    {
-        if(taChoices[i].checked){
-            userChoice == taChoices[i].value;
-            taChoices[i].checked = false;
-            return true;
-        }
-        
 
-    }
-    alert("Please select an answer before continuing");
-    return false;
-         
-    }
 
     function endGame() {
        
        taQuiz.innerHTML = "The users's score is " + score + " out of " + numQuestions + ":";
+       for (let i = 0; i < points.length; i++) {
+           if(points[i] == 0){
+               var result = document.createElement("p");
+                result.innerHTML = "The Question #" + (i+1) + ":" +  "Incorrect";
+                result.style.color = "red";
+
+           }
+           else{
+            result.innerHTML = "The Question #" + (i+1) + ":" +  "Correct";
+            result.style.color = "blue";
+            
+           }
+           taQuiz.appendChild(result);
+       }
 
        
-
+        document.getElementById("option").style.display = "block";
         
     }
     
