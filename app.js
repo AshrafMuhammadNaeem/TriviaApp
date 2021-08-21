@@ -146,6 +146,15 @@ function getUserChoice() {
     return false;
          
     }
+
+    function endGame() {
+       
+       taQuiz.innerHTML = "The users's score is " + score + " out of " + numQuestions + ":";
+
+       
+
+        
+    }
     
 
 
