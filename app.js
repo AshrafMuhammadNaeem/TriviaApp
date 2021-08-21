@@ -120,14 +120,16 @@ function goForNextQ() {
          points[current] = 0;
 
     }
-    
-    for(var current = i; i = 0; current < numQuestions; current++){
-        
-        if (current == 5) { break; }
-        renderQuestion();
+    if(current == questions.length - 1){
+        endGame();
     }
-
+    else{
+        current++;
+    renderQuestion();
+    }
+    
 }
+
 }
 function getUserChoice() {
     for (i = 0; i < taChoices.length; i++)
