@@ -11,7 +11,7 @@ var defaultQuestions = [
         choiceB: "nose",
         choiceC: "toes",
         choiceD: "eyes",
-        correct: "middle ear"
+        correct: "A"
     },
     {
         question: "What is the most abundant element in the Universe?",
@@ -43,7 +43,7 @@ var defaultQuestions = [
         choiceB: "Mars",
         choiceC: "Jupiter",
         choiceD: "Uranus",
-        correct: "Jupiter"
+        correct: "C"
     }];
 
 // get HTML elements
@@ -124,9 +124,10 @@ function getUserChoice() {
     return false;
          
     }
+
 function goForNextQ() {
     if(getUserChoice()){
-       if(userChoice == questions[current].correct) {
+       if(taChoices[i].value == qInfo.correct) {
            score++;
            points[current] = 1;
            
